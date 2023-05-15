@@ -1,0 +1,53 @@
+/* App.css */
+
+/* Color variables */
+:root {
+  --main-background-color: #F5ECE6;
+  --accent-color: #8D6B67;
+  --text-color: #3E3E3E;
+  --highlight-color: #BF8040;
+}
+
+.app {
+  text-align: center;
+}
+
+.banner {
+  background-color: var(--main-background-color);
+  padding: 20px;
+}
+
+.navigation {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.navigation li {
+  margin-right: 10px;
+}
+
+
+.content {
+  background-color: var(--main-background-color);
+  color: var(--text-color);
+  padding: 20px;
+}
+
+.footer {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
