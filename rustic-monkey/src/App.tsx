@@ -1,4 +1,10 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Footer from './footer'
+import Navigation from './navigation'
+import HomePage from './homepage';
+import AboutPage from './aboutpage';
+import ContactPage from './contactpage';
 import './App.css';
 
 function App() {
@@ -9,25 +15,15 @@ function App() {
         <h1>RusticMonkey</h1>
       </header>
 
-      <nav className="navigation">
-        {/* Navigation menu */}
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+      <Navigation />
 
-      <main className="content">
-        {/* Content pane */}
-        <h2>Welcome to my website!</h2>
-        <p>This is the main content of the page.</p>
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
 
-      <footer className="footer">
-        {/* Footer */}
-        <p>&copy; 2023 RusticMonkey. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
